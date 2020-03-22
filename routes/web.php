@@ -43,6 +43,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('examcard', 'HomeController@examcardPost')->name('examcard.post');
             Route::get('information', 'HomeController@information')->name('information');
             Route::get('biaya', 'HomeController@biaya')->name('biaya');
+            Route::get('avatar', 'AvatarController@index')->name('avatar');
+            Route::post('avatar', 'AvatarController@store')->name('avatar.store');
         }); // end route prefix SMP
 
         Route::group(['middleware' => ['role:Super Admin|Admin']], function () {

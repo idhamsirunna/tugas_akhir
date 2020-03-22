@@ -3,7 +3,7 @@
 @section('konten')
 @if (Auth::user()->sudah_cetak === 0)
 <a href="{{ route('biodata.create') }}" class="btn btn-primary mb-4">Lengkapi Data Siswa</a>
-<a href="#" class="btn btn-primary mb-4">Upload Pas Foto 4x6</a>
+<a href="{{ route('avatar') }}" class="btn btn-primary mb-4">Upload Pas Foto 4x6</a>
 @endif
 @php
 $cRole = Auth::user()->getRoleNames()[0];

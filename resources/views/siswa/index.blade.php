@@ -16,19 +16,17 @@
     </div>
 </div>
 
-<h1 class="h4 my-2 text-gray-800">Informasi Akun</h1>
-<div class="card mb-3">
-    <div class="row no-gutters">
-        <div class="col-md-3">
-            <img src="https://source.unsplash.com/QAB-WJcbgJk/" class="card-img" alt="...">
-        </div>
-        <div class="col-md-9">
-            <div class="card-body">
-                <h5 class="card-title">{{ Auth::user()->nama }}</h5>
-                <p class="card-text">{{ Auth::user()->email }}</p>
-                <p class="card-text"><small class="text-muted">Tanggal
-                        Pendaftaran: {{ Auth::user()->created_at->format('d M Y') }}</small></p>
-            </div>
+<h1 class="h4 mt-2 mb-4 text-gray-800">Informasi Akun</h1>
+<div class="row no-gutters">
+    <div class="col-md-3">
+        <img src="{{ asset('assets') }}/images/profile/{{ Auth::user()->photo }}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-9">
+        <div class="card-body">
+            <h5 class="card-title">{{ Auth::user()->nama }}</h5>
+            <p class="card-text">{{ Auth::user()->email }}</p>
+            <p class="card-text"><small class="text-muted">Tanggal
+                    Pendaftaran: {{ Auth::user()->created_at->format('d M Y') }}</small></p>
         </div>
     </div>
 </div>
